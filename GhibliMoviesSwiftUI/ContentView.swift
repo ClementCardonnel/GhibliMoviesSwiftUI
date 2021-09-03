@@ -35,7 +35,7 @@ struct ContentView: View {
             }
 
             // The second View is the Detail
-            EmptyView()
+            Text("Select a movie from the list")
         }
     }
 }
