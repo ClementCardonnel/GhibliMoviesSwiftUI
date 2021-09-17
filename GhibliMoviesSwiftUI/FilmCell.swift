@@ -22,8 +22,10 @@ struct FilmCell: View {
                 Text(film.title)
                     .font(.headline)
                     .foregroundStyle(.primary)
-                Text(film.releaseDate.formatted())
-                    .foregroundStyle(.secondary)
+                if let releaseDate = film.formattedReleaseDate {
+                    Text(releaseDate)
+                        .foregroundStyle(.secondary)
+                }
             }
             .multilineTextAlignment(.center)
             .frame(maxWidth: .infinity)
