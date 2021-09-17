@@ -13,7 +13,7 @@ struct FilmCell: View {
     var body: some View {
         ZStack(alignment: .bottom) {
             if let image = film.cover {
-                Image(uiImage: image)
+                image
                     .resizable()
                     .scaledToFill()
             }
@@ -21,7 +21,6 @@ struct FilmCell: View {
             VStack(spacing: 4) {
                 Text(film.title)
                     .font(.headline)
-//                    .bold()
                     .foregroundStyle(.primary)
                 Text(film.releaseDate.formatted())
                     .foregroundStyle(.secondary)

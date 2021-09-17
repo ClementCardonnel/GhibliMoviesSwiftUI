@@ -14,7 +14,7 @@ struct FilmDetailView: View {
         ScrollView {
             VStack(spacing: 24) {
                 if let cover = film.cover {
-                    Image(uiImage: cover)
+                    cover
                         .resizable()
                         .scaledToFit()
                         .frame(width: 200, height: 300)

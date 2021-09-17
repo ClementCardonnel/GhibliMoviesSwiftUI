@@ -5,12 +5,12 @@
 //  Created by Clément Cardonnel on 22/10/2020.
 //
 
-import UIKit
+import SwiftUI
 
 extension Film {
     
     /// The film's cover retrieved from Assets.xcassets as an optional UIImage
-    var cover: UIImage? {
+    var cover: Image? {
         Cover(rawValue: id)?.image
     }
     
@@ -49,48 +49,48 @@ fileprivate extension Film {
         case kaguya = "578ae244-7750-4d9f-867b-f3cd3d6fecf4"
         case marnie = "5fdfb320-2a02-49a7-94ff-5ca418cae602"
         
-        var image: UIImage? {
+        var image: Image? {
             switch self {
             case .castleSky:
-                return UIImage(named: "castleSky")
+                return Image("castleSky")
             case .fireflies:
-                return UIImage(named: "fireflies")
+                return Image("fireflies")
             case .totoro:
-                return UIImage(named: "totoro")
+                return Image("totoro")
             case .kikiDelivery:
-                return UIImage(named: "kikiDelivery")
+                return Image("kikiDelivery")
             case .yesterday:
-                return UIImage(named: "yesterday")
+                return Image("yesterday")
             case .rosso:
-                return UIImage(named: "rosso")
+                return Image("rosso")
             case .pomPoko:
-                return UIImage(named: "pompoko")
+                return Image("pompoko")
             case .whispers:
-                return UIImage(named: "whispers")
+                return Image("whispers")
             case .mononoke:
-                return UIImage(named: "mononoke")
+                return Image("mononoke")
             case .yamadas:
-                return UIImage(named: "yamadas")
+                return Image("yamadas")
             case .spirited:
-                return UIImage(named: "spirited")
+                return Image("spirited")
             case .catReturns:
-                return UIImage(named: "catReturns")
+                return Image("catReturns")
             case .movingCastle:
-                return UIImage(named: "movingCastle")
+                return Image("movingCastle")
             case .earthsea:
-                return UIImage(named: "earthsea")
+                return Image("earthsea")
             case .ponyo:
-                return UIImage(named: "ponyo")
+                return Image("ponyo")
             case .arrietty:
-                return UIImage(named: "arrietty")
+                return Image("arrietty")
             case .poppy:
-                return UIImage(named: "poppyHill")
+                return Image("poppyHill")
             case .wind:
-                return UIImage(named: "wind")
+                return Image("wind")
             case .kaguya:
-                return UIImage(named: "kaguya")
+                return Image("kaguya")
             case .marnie:
-                return UIImage(named: "marnie")
+                return Image("marnie")
             }
         }
     }

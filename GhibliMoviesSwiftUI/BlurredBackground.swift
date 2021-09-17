@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct BlurredBackground: View {
-    let cover: UIImage?
+    let cover: Image?
 
     var body: some View {
         if let cover = cover {
-            Image(uiImage: cover)
+            cover
                 .resizable()
                 .scaledToFill()
                 .edgesIgnoringSafeArea(.all)
