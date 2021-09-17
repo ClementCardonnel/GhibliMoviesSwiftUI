@@ -21,12 +21,16 @@ struct FilmDetailView: View {
                         .clipped()
                 }
 
-                Text(film.title)
-                    .font(.title)
-                    .foregroundStyle(.primary)
+                VStack(spacing: 8) {
+                    Text(film.title)
+                        .font(.title)
+                        .foregroundStyle(.primary)
 
-                Text(film.releaseDate.formatted())
-                    .foregroundStyle(.primary)
+                    if let releaseDate = film.formattedReleaseDate {
+                        Text(releaseDate)
+                            .foregroundStyle(.primary)
+                    }
+                }
 
                 Text(film.description)
                     .foregroundStyle(.secondary)
@@ -63,5 +67,6 @@ struct FilmDetailView: View {
 struct FilmDetailView_Previews: PreviewProvider {
     static var previews: some View {
         FilmDetailView(film: .preview)
+            .previewDevice("iPod touch (7th generation)")
     }
 }

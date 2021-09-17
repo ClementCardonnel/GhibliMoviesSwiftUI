@@ -26,6 +26,12 @@ struct Film {
     
     /// A release date (gregorian year)
     let releaseDate: Int
+
+    var formattedReleaseDate: String? {
+        let calendar = Calendar(identifier: .gregorian)
+        return calendar.date(from: DateComponents(year: releaseDate))?
+            .formatted(.dateTime.year())
+    }
     
     /// Scrore from 0 to 100
     let score: Int

@@ -16,7 +16,7 @@ struct BlurredBackground: View {
                 .resizable()
                 .scaledToFill()
                 .edgesIgnoringSafeArea(.all)
-                .overlay(.regularMaterial)
+                .overlay(.thinMaterial)
         } else {
             EmptyView()
         }
